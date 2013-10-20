@@ -20,4 +20,4 @@ nonen-rena-blog-notification
 
 # setting cron
 
-    0 0,8-23 * * * /path/to/main.rb
+    0 0,8-23 * * * ruby /path/to/main.rb
