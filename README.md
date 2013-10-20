@@ -3,9 +3,8 @@ nonen-rena-notification
 
 能年玲奈関係の情報をPUSH通知する
 
-# branches
-
-    blog # 公式ブログ
+* 公式ブログ
+* 事務所ニュース
 
 # install
 
@@ -13,9 +12,9 @@ nonen-rena-notification
 
 # use im.kayac.com
 
-## move configuration file
+## copy configuration file
 
-    $ mv config.yml.sample config.yml
+    $ cp config/account.yml.sample config/account.yml
 
 ## setting configuration
 
