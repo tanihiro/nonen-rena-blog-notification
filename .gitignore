@@ -1,0 +1,5 @@
+.bundle
+Gemfile.lock
+vendor/
+config.yml
+entry_id.txt
