@@ -8,11 +8,8 @@ if File.exists?('recent_id.txt')
   recent_id = File.read 'recent_id.txt'
 end
 
-# 公式BLOGから最新のIDを取得
-top      = Nokogiri::HTML(open('http://yaplog.jp/lp-n-rena/')) 
-link     = top.css('.entry > .entry_title > h3 > a').first
-href     = link.attributes['href'].to_s
-entry_id = href.split('/').last
+# TODO 最新の情報を識別するIDの取得処理
+entry_id = 0
 
 if entry_id.to_i > recent_id.to_i
   # PUSH通知

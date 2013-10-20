@@ -1,7 +1,11 @@
-nonen-rena-blog-notification
+nonen-rena-notification
 ============================
 
-能年玲奈のブログに更新があったらPUSH通知する
+能年玲奈関係の情報をPUSH通知する
+
+# branches
+
+    blog # 公式ブログ
 
 # install
 
