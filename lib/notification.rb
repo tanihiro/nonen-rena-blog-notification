@@ -6,7 +6,7 @@ class Notification
   IM_KAYAC_COM_URL = "http://im.kayac.com/api/post/"
 
   def initialize
-    config = YAML.load(File.read('config.yml'))
+    config = YAML.load(File.read(File.expand_path(File.dirname(__FILE__)) + '/../config/account.yml'))
     @username = config['username']
     @password = config['password']
   end

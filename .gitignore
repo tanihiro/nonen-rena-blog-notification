@@ -1,5 +1,5 @@
 .bundle
 Gemfile.lock
 vendor/
-config.yml
-recent_id.txt
+config/account.yml
+data/*
