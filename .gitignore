@@ -2,4 +2,4 @@
 Gemfile.lock
 vendor/
 config.yml
-entry_id.txt
+recent_id.txt
