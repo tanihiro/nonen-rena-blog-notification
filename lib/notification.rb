@@ -17,6 +17,7 @@ class Notification
       request = Net::HTTP::Post.new(uri.path)
       request.set_form_data :message => message, :handler => href, :password => @password 
       response = http.request(request)
+      puts "send #{message}"
     end
   end
 end
