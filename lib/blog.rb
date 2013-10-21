@@ -3,10 +3,7 @@ class Blog < BaseInformation
 
   def initialize
     super 'blog'
-    top       = Nokogiri::HTML(open('http://yaplog.jp/lp-n-rena/')) 
-    link      = top.css('.entry > .entry_title > h3 > a').first
-    @href     = link.attributes['href'].to_s
-    @entry_id = href.split('/').last
+    scraping
   end
 
   def title
@@ -15,6 +12,14 @@ class Blog < BaseInformation
 
   def href
     @href
+  end
+
+  private
+  def scraping
+    top       = Nokogiri::HTML(open('http://yaplog.jp/lp-n-rena/')) 
+    link      = top.css('.entry > .entry_title > h3 > a').first
+    @href     = link.attributes['href'].to_s
+    @entry_id = href.split('/').last
   end
 
 end

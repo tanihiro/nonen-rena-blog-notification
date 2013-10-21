@@ -3,11 +3,8 @@ class News < BaseInformation
 
   def initialize
     super 'news'
-    @domain   = 'http://www.lespros.co.jp'
-    top      = Nokogiri::HTML(open("#{@domain}/talent/artists/rena_nounen/"))
-    @news     = top.css('#profile-news dl > dt > .news-title > a').first
-    @href     = @news.attributes['href'].to_s
-    @entry_id = href.split('/').last
+    @domain = 'http://www.lespros.co.jp'
+    scraping
   end
 
   def title
@@ -16,6 +13,14 @@ class News < BaseInformation
 
   def href
     @domain + @href
+  end
+
+  private
+  def scraping
+    top       = Nokogiri::HTML(open("#{@domain}/talent/artists/rena_nounen/"))
+    @news     = top.css('#profile-news dl > dt > .news-title > a').first
+    @href     = @news.attributes['href'].to_s
+    @entry_id = href.split('/').last
   end
 
 end
