@@ -23,4 +23,6 @@ nonen-rena-notification
 
 # setting cron
 
+example
+
     0 0,8-23 * * * ruby /path/to/main.rb
