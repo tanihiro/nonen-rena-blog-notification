@@ -5,6 +5,7 @@ nonen-rena-notification
 
 * 公式ブログ
 * 事務所ニュース
+* yahooニュース
 
 # install
 
@@ -25,4 +26,4 @@ nonen-rena-notification
 
 example
 
-    0 0,8-23 * * * ruby /path/to/main.rb
+    0 * * * * ruby /path/to/main.rb
