@@ -1,5 +1,4 @@
 .bundle
-Gemfile.lock
 vendor/
 config/account.yml
 data/*
